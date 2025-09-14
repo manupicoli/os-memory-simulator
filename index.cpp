@@ -6,12 +6,13 @@ using namespace std;
 int main() {
     int option = 0;
     do {
-        cout << "\n- - - - - SIMULADOR DE GERENCIAMENTO DE MEMÓRIA - - - - -\n";
-        cout << "\nEscolha o modo de simulação:\n";
-        cout << "1. Alocação Contígua Dinâmica\n";
-        cout << "2. Paginação Pura\n";
-        cout << "3. Sair\n";
-        cout << "\nDigite sua opção: ";
+        cout << "\n- - - - - SIMULADOR DE GERENCIAMENTO DE MEMORIA - - - - -\n"
+        << "\nEscolha o modo de simulacao:\n"
+        << "1. Alocacao Contigua Dinamica\n"
+        << "2. Paginacao pura\n"
+        << "3. Sair\n"
+        << "\nDigite sua opcao: ";
+
         cin >> option;
 
         switch (option) {
@@ -25,7 +26,7 @@ int main() {
                 cout << "Encerrando simulador...\n";
                 break;
             default:
-                cout << "Opção inválida, tente novamente.\n";
+                cout << "Opcao invalida, tente novamente.\n";
         }
     } while (option != 3);
 
