@@ -1,5 +1,6 @@
 #include <iostream>
 #include "include/ContiguousAllocation.hpp"
+#include "include/Pagination.hpp"
 
 using namespace std;
 
