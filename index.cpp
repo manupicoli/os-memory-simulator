@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/functions.hpp"
+#include "include/ContiguousAllocation.hpp"
 
 using namespace std;
 
