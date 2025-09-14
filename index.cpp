@@ -10,7 +10,7 @@ int main() {
         cout << "\n- - - - - SIMULADOR DE GERENCIAMENTO DE MEMORIA - - - - -\n"
         << "\nEscolha o modo de simulacao:\n"
         << "1. Alocacao Contigua Dinamica\n"
-        << "2. Paginacao pura\n"
+        << "2. Paginacao Pura\n"
         << "3. Sair\n"
         << "\nDigite sua opcao: ";
 
@@ -21,7 +21,7 @@ int main() {
                 allocateContiguous();
                 break;
             case 2:
-                // ALocação por paginação pura
+                memoryPagination();
                 break;
             case 3:
                 cout << "Encerrando simulador...\n";
