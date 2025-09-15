@@ -1,4 +1,7 @@
 #include "ContiguousAllocation.hpp"
+#include "ManagesProcess.hpp"
+#include "Logging.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -18,26 +21,47 @@ void allocateContiguous() {
 
         switch (option) {
             case 1:
-                cout << "Algoritmo First-Fit selecionado.\n";
-                // allocateContiguousFirstFit();
+                logging(LogLevel::INFO, "Algoritmo First-Fit selecionado");
+
+                cout << "\n- - - - - - INICIANDO SIMULAÇÃO - - - - - -\n";
+                logging(LogLevel::INFO, "Modo: ALOCAÇÃO CONTÍGUA.");
+                logging(LogLevel::INFO, "Algoritmo de Alocação: First-Fit.");
+
+                allocateContiguousFirstFit();
+
                 break;
             case 2:
-                cout << "Algoritmo Best-Fit selecionado.\n";
+                logging(LogLevel::INFO,"Algoritmo Best-Fit selecionado.");
+
+                cout << "\n- - - - - - INICIANDO SIMULAÇÃO - - - - - -\n";
+                logging(LogLevel::INFO, "Modo: ALOCAÇÃO CONTÍGUA.");
+                logging(LogLevel::INFO, "Algoritmo de Alocação: Best-Fit.");
+
                 // allocateContiguousBestFit();
                 break;
             case 3:
-                cout << "Algoritmo Worst-Fit selecionado.\n";
+                logging(LogLevel::INFO,"Algoritmo Worst-Fit selecionado.");
+
+                cout << "\n- - - - - - INICIANDO SIMULAÇÃO - - - - - -\n";
+                logging(LogLevel::INFO, "Modo: ALOCAÇÃO CONTÍGUA.");
+                logging(LogLevel::INFO, "Algoritmo de Alocação: Worst-Fit.");
+
                 // allocateContiguousWorstFit();
                 break;
             case 4:
-                cout << "Algoritmo Circular-Fit selecionado.\n";
+                logging(LogLevel::INFO,"Algoritmo Circular-Fit selecionado.");
+
+                cout << "\n- - - - - - INICIANDO SIMULAÇÃO - - - - - -\n";
+                logging(LogLevel::INFO, "Modo: ALOCAÇÃO CONTÍGUA.");
+                logging(LogLevel::INFO, "Algoritmo de Alocação: Circular-Fit.");
+
                 // allocateContiguousCircularFit();
                 break;
             case 5:
-                cout << "Voltando ao menu principal...\n";
+                logging(LogLevel::INFO,"Voltando ao menu principal...");
                 break;
             default:
-                cout << "Opção inválida, tente novamente.\n";
+                logging(LogLevel::INFO,"Opção inválida, tente novamente.");
         }
     } while (option != 5);
 

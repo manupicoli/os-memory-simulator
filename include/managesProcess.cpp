@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+#include "Logging.hpp"
+
 using namespace std;
 vector<struct Process> processList;
 
@@ -65,7 +67,7 @@ void listProcesses() {
     for (const auto& p : processList) {
         logging(
             LogLevel::INFO,
-            "Nome: " + p.name + " | Tamanho: " + std::to_string(p.size)
+            "Nome: " + p.name + " | Tamanho: " + to_string(p.size)
         );
     }
 }
