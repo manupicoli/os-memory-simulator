@@ -11,9 +11,9 @@ void logging(LogLevel level, const string &message) {
     time_t t_now = chrono::system_clock::to_time_t(now);
     tm tm_now;
 #ifdef _WIN32
-    localtime_s(&tm_now, &t_now);
+    localtime_s(&tm_now, &t_now); // windows
 #else
-    localtime_r(&t_now, &tm_now);
+    localtime_r(&t_now, &tm_now); // linux
 #endif
 
     string lvl;

@@ -7,6 +7,7 @@
 #include <cmath>
 #include <unordered_map>
 #include <iomanip>
+#include <limits>
 
 using namespace std;
 
@@ -32,8 +33,9 @@ void pagination() {
     int option = 0;
     totalMemory = 1024;
 
-    logging(LogLevel::INFO, "Iniciando simulador de memoria...");
-    logging(LogLevel::INFO, "Modo: Paginacao Pura!");
+    cout << "\n==============================================" << endl;
+    cout << "              PAGINACAO PURA" << endl;
+    cout << "==============================================" << endl << endl;
 
     logging(LogLevel::ACTION, "Digite o tamanho total da memoria: ");
     cin >> totalMemory;
@@ -51,15 +53,25 @@ void pagination() {
     showFrames(frames);
 
     do {
-        cout << "O que voce deseja fazer?\n"
-        << "1. Criar novo processo\n"
-        << "2. Remover processo\n"
-        << "3. Visualizar tabela de paginas\n"
-        << "4. Visualizar metricas\n"
-        << "5. Voltar para o menu principal:\n"
-        << "Digite sua opcao: ";
+        cout << "\n==============================================" << endl;
+        cout << "                 MENU DE ACOES " << endl;
+        cout << "==============================================" << endl << endl;
+        cout << "  [1] Criar novo processo"      << endl;
+        cout << "  [2] Remover processo"         << endl;
+        cout << "  [3] Visualizar tabela de paginas" << endl;
+        cout << "  [4] Visualizar metricas"      << endl;
+        cout << "  [5] Voltar para o menu principal" << endl << endl;
+        cout << "Digite sua opcao: ";
 
         cin >> option;
+        cout << endl;
+
+        if (!(option)) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            option = 0; 
+        }
 
         switch (option) {
             case 1:

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits>
+
 #include "contiguos_allocation/ContiguousAllocation.hpp"
 #include "pagination/Pagination.hpp"
 
@@ -23,6 +25,13 @@ int main() {
 
         cout << endl;
 
+        if (!(option)) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            option = 0; 
+        }
+
         switch (option) {
         case 1:
             allocateContiguous();
@@ -31,10 +40,15 @@ int main() {
             pagination();
             break;
         case 3:
-            cout << ">>> Encerrando simulador..." << endl;
+            cout << "\n==============================================" << endl;
+            cout << "          ENCERRANDO SIMULADOR..." << endl;
+            cout << "==============================================" << endl;
+            cout << endl;
             break;
         default:
-            cout << ">>> Op��o invalida, tente novamente." << endl;
+            cout << ">>> Opcao invalida, tente novamente. Digite:" << endl;
+            cout << "    Entradas aceitas: 1, 2 e 3" << endl;
+            cout << "    Exemplo de entrada: '1' para selecionar o modo de Alocacao Contigua Dinamica" << endl;
         }
 
         cout << endl;
