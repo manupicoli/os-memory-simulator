@@ -1,4 +1,4 @@
-#include "Process.hpp"
+#include "PaginationProcess.hpp"
 #include "../include/Logging.hpp"
 
 #include <sstream>

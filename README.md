@@ -9,6 +9,6 @@ A C++ simulator for studying memory management techniques:
 Compile o programa utilizando o **g++** (com suporte a C++17 ou superior):
 
 ```bash
-g++ -std=c++17 index.cpp include/Logging.cpp memory_controll/Memory.cpp memory_controll/process_controll/ProcessManagement.cpp pagination/pagination.cpp pagination/process.cpp -o index
+g++ -std=c++17 index.cpp include/Logging.cpp memory_controll/Memory.cpp memory_controll/process_controll/ProcessManagement.cpp pagination/pagination.cpp pagination/paginationProcess.cpp -o index
 ./index
 ```
