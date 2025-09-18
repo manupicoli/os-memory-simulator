@@ -9,18 +9,17 @@ struct PageEntry {
     int frameNumber;
 };
 
-struct Process {
+struct PaginationProcess {
     std::string pid;
     int sizeKB;
     int numPages;
     std::vector<PageEntry> pageTable;
 };
 
-Process createProcess(const std::string& pid, int sizeKB, int pageSizeKB);
-void removeProcess(Process& p);
-void viewPageTable();
-void showFrames();
-void viewMetrics();
-
+PaginationProcess createNewProcess(const std::string& pid, int sizeKB, int pageSizeKB);
+// void removeProcess(PaginationProcess& p);
+// void viewPageTable();
+void showFrames(const std::vector<std::string>& frames);
+// void viewMetrics();
 
 #endif

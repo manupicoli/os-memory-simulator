@@ -21,6 +21,11 @@ void logging(LogLevel level, const string &message) {
         case LogLevel::INFO:  lvl = "INFO"; break;
         case LogLevel::WARN:  lvl = "WARN"; break;
         case LogLevel::ERROR: lvl = "ERROR"; break;
+        case LogLevel::VISUAL: lvl = "VISUAL"; break;
+        case LogLevel::ACTION: lvl = "ACTION"; break;
+        case LogLevel::ALLOC: lvl = "ALLOC"; break;
+        case LogLevel::SUCCESS: lvl = "SUCCESS"; break;
+        case LogLevel::METRICS: lvl = "METRICS"; break;
     }
 
     cout << "["

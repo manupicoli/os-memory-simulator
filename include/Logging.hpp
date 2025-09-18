@@ -3,7 +3,7 @@
 
 #include <string>
 
-enum class LogLevel { INFO, WARN, ERROR };
+enum class LogLevel { INFO, WARN, ERROR, VISUAL, ACTION, ALLOC, SUCCESS, METRICS };
 
 void logging(LogLevel level, const std::string &message);
 
