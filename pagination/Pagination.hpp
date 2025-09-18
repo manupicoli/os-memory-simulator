@@ -1,20 +1,6 @@
-#ifndef PAGINATION_HPP //ifndef é pra verificar se ALLOCCONTIGUOUS_HPP está definido
-#define PAGINATION_HPP //define, se não estava
-
-#include <vector>
-
-struct PageEntry {
-    int pageNumber;
-    int frameNumber;
-};
-
-struct Process {
-    string pid;
-    int sizeKB;
-    int numPages;
-    vector<PageEntry> pageTable;
-};
+#ifndef PAGINATION_HPP
+#define PAGINATION_HPP
 
 void pagination();
 
-#endif //finaliza o ifndef
+#endif

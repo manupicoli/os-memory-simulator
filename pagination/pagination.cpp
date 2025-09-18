@@ -41,7 +41,7 @@ void pagination() {
                 break;
             default:
                 logging(LogLevel::INFO, "Opcao invalida, tente novamente.");
-
         }
+    
     } while (option != 5);
 }
