@@ -2,6 +2,7 @@
 
 # Arquivos
 *.exe
+*.obj
 *.suo
 *.user
 *.userosscache
