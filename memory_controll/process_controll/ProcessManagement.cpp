@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <string>
 #include <algorithm>
+#include <limits>
 
 using namespace std;
 
@@ -28,6 +29,13 @@ int menuProcess(Memory& mem) {
         cout << "Digite sua opcao: ";
         cin >> option;
         cout << endl;
+
+        if (!(option)) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            option = 0; 
+        }
 
         switch (option) {
         case 1:

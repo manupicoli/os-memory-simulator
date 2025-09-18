@@ -35,6 +35,14 @@ static void allocateContiguous() {
 
         cout << "Digite sua opcao: ";
         cin >> option;
+
+        if (!(option)) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            option = 0; 
+        }
+
         cout << endl;
 
         switch (option) {
