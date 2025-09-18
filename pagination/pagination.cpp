@@ -177,20 +177,7 @@ void removeProcess() {
         it->second.pageTable.clear();
         processes.erase(it);
 
-        vector<int> freedFrames;
-        for (auto& entry : it->second.pageTable) {
-            frames[entry.frameNumber] = "....";
-            freedFrames.push_back(entry.frameNumber);
-        }
-
-        ostringstream msg;
-        msg << "Processo " << processPid << " removido. Frames liberados: ";
-
-        for (size_t i = 0; i < freedFrames.size(); i++) {
-            msg << freedFrames[i] << (i < freedFrames.size() - 1 ? ", " : "");
-        }
-
-        logging(LogLevel::SUCCESS, msg.str());
+        logging(LogLevel::SUCCESS, "Processo " + processPid + " removido com sucesso!");
         showFrames(frames);
     } else {
         logging(LogLevel::ERROR, "Processo " + processPid + " nao encontrado!");
