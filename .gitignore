@@ -1,0 +1,26 @@
+.vs/
+
+# Arquivos
+*.exe
+*.obj
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Pastas de build
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+
+# Pacotes
+[Pp]ackages/
+*.nupkg
+
+# Temporários
+*.ipch
+*.aps
+*.tmp
+*.log
+Thumbs.db
