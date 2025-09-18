@@ -17,9 +17,7 @@ struct PaginationProcess {
 };
 
 PaginationProcess createNewProcess(const std::string& pid, int sizeKB, int pageSizeKB);
-// void removeProcess(PaginationProcess& p);
-// void viewPageTable();
 void showFrames(const std::vector<std::string>& frames);
-// void viewMetrics();
+void viewPageTable(const PaginationProcess& p, int pageSize);
 
 #endif

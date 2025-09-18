@@ -17,12 +17,12 @@ int numFrames;
 unordered_map<string, PaginationProcess> processes;
 vector<string> frames;
 
+static void viewMetrics();
+static void selectPageTable();
+static void removeProcess();
 static void allocateProcess(PaginationProcess &newProcess);
 static bool hasFreeFrames(int needed);
 static void verifyNewProcess();
-static void removeProcess();
-static void viewPageTable();
-static void viewMetrics();
 
 void printSeparator() {
     cout << string(60, '-') << "\n";
@@ -69,7 +69,7 @@ void pagination() {
                 removeProcess();
                 break;
             case 3:
-                viewPageTable();
+                selectPageTable();
                 break;
             case 4:
                 viewMetrics();
@@ -124,9 +124,8 @@ void viewMetrics() {
     printSeparator();
 }
 
-void viewPageTable() {
+void selectPageTable() {
     string processPid;
-
     printSeparator();
 
     cout << "Digite o nome (PID) do processo que deseja inspecionar: ";
@@ -135,31 +134,15 @@ void viewPageTable() {
     printSeparator();
 
     auto it = processes.find(processPid);
-    if (it == processes.end()) {
+
+    if (it != processes.end()) {
+        viewPageTable(it->second, pageSize);
+        printSeparator();
+    } else {
         logging(LogLevel::ERROR, "Processo nao encontrado!");
         printSeparator();
-        return;
     }
-
-    PaginationProcess& p = it->second;
-    int lastPageUsedKB = p.sizeKB % pageSize;
-    int internalFrag = lastPageUsedKB == 0 ? 0 : pageSize - lastPageUsedKB;
-
-    cout << "[PAGE TABLE] Processo " << p.pid 
-         << " (" << p.numPages << " paginas, " << p.sizeKB << " KB)\n";
-
-    for (auto& entry : p.pageTable) {
-        cout << "Pagina " << entry.pageNumber << " -> Frame " << entry.frameNumber << "\n";
-    }
-
-    cout << "Fragmentacao Interna: " << internalFrag 
-         << " KB (ultima pagina ocupou "
-         << (lastPageUsedKB == 0 ? pageSize : lastPageUsedKB)
-         << " KB do frame)\n";
-
-    printSeparator();
 }
-
 
 void removeProcess() {
     string processPid;

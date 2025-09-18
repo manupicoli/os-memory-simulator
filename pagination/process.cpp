@@ -31,17 +31,19 @@ PaginationProcess createNewProcess(const std::string& pid, int sizeKB, int pageS
     return p;
 }
 
-// void removeProcess(PaginationProcess& p) {
-//     for (auto& entry : p.pageTable) {
-//         entry.frameNumber = -1;
-//     }
-// }
+void viewPageTable(const PaginationProcess& p, int pageSize) {
+    int lastPageUsedKB = p.sizeKB % pageSize;
+    int internalFrag = lastPageUsedKB == 0 ? 0 : pageSize - lastPageUsedKB;
 
-// void viewPageTable() {
+    std::cout << "[PAGE TABLE] Processo " << p.pid 
+              << " (" << p.numPages << " paginas, " << p.sizeKB << " KB)\n";
 
-// }
+    for (auto& entry : p.pageTable) {
+        std::cout << "Pagina " << entry.pageNumber << " -> Frame " << entry.frameNumber << "\n";
+    }
 
-
-// void viewMetrics() {
-
-// }
+    std::cout << "Fragmentacao Interna: " << internalFrag 
+              << " KB (ultima pagina ocupou "
+              << (lastPageUsedKB == 0 ? pageSize : lastPageUsedKB)
+              << " KB do frame)\n";
+}
