@@ -1,6 +1,6 @@
 #include <iostream>
 #include "contiguos_allocation/ContiguousAllocation.hpp"
-#include "include/Pagination.hpp"
+#include "pagination/Pagination.hpp"
 
 using namespace std;
 
@@ -28,13 +28,13 @@ int main() {
             allocateContiguous();
             break;
         case 2:
-            memoryPagination();
+            pagination();
             break;
         case 3:
             cout << ">>> Encerrando simulador..." << endl;
             break;
         default:
-            cout << ">>> Opção invalida, tente novamente." << endl;
+            cout << ">>> Opï¿½ï¿½o invalida, tente novamente." << endl;
         }
 
         cout << endl;

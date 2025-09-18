@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void memoryPagination() {
+void pagination() {
     int option = 0;
     do {
         cout << "\n- - - - - - PAGINACAO - - - - - -\n"
@@ -13,7 +13,7 @@ void memoryPagination() {
         << "3. Visualizar tabela de paginas\n"
         << "4. Visualizar metricas\n"
         << "5. Voltar para o menu principal:\n"
-        << "Digite sua opção: ";
+        << "Digite sua opcao: ";
 
         cin >> option;
 
@@ -38,7 +38,7 @@ void memoryPagination() {
                 cout << "Voltando ao menu principal...\n";
                 break;
             default:
-                cout << "Opcao inválida, tente novamente.\n";
+                cout << "Opcao invalida, tente novamente.\n";
         }
     } while (option != 5);
 }
