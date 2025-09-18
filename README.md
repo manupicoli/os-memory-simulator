@@ -96,7 +96,9 @@ O diretório `data_structures/` foi criado para abrigar as definições de `Proc
 ## Screenshots 
 
 ![texto alternativo](caminho/para/imagem.png)
+
 ![texto alternativo](caminho/para/imagem.png)
+
 ![texto alternativo](caminho/para/imagem.png)
 
 ## Integrantes
