@@ -1,4 +1,6 @@
 #include "Pagination.hpp"
+#include "../include/Logging.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -35,10 +37,11 @@ void pagination() {
                 // viewMetrics();
                 break;
             case 5:
-                cout << "Voltando ao menu principal...\n";
+                logging(LogLevel::INFO, "Voltando ao menu principal...");
                 break;
             default:
-                cout << "Opcao invalida, tente novamente.\n";
+                logging(LogLevel::INFO, "Opcao invalida, tente novamente.");
+
         }
     } while (option != 5);
 }
