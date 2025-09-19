@@ -72,6 +72,8 @@ O projeto está organizado de forma modular para separar as diferentes responsab
 │   ├── logging.cpp
 │   └── Logging.hpp
 │
+├── assets/images               # Screenshots
+│
 ├── .gitignore                  # Arquivo para ignorar arquivos e pastas no Git (ex: executáveis)
 └── README.md                   # Documentação do projeto (este arquivo)
 ```
@@ -95,11 +97,13 @@ O diretório `data_structures/` foi criado para abrigar as definições de `Proc
 
 ## Screenshots 
 
-![texto alternativo](caminho/para/imagem.png)
+![texto alternativo](assets/image.png)
 
-![texto alternativo](caminho/para/imagem.png)
+![texto alternativo](assets/image2.png)
 
-![texto alternativo](caminho/para/imagem.png)
+![texto alternativo](assets/image3.png)
+
+![texto alternativo](assets/image4.png)
 
 ## Integrantes
 
